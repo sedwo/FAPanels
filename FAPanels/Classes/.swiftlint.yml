@@ -1,0 +1,34 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+
+disabled_rules: # rule identifiers to exclude from running
+  - vertical_whitespace
+  - nesting
+  - force_cast
+  - leading_whitespace
+  - unused_closure_parameter
+  - empty_parentheses_with_trailing_closure
+  - empty_enum_arguments
+  - identifier_name
+  - class_delegate_protocol
+  - fallthrough
+  - type_name
+
+cyclomatic_complexity:
+  - 20 # warning
+  - 25 # error
+
+line_length:
+  - 150 # warning
+  - 200 # error
+
+function_body_length:
+  - 60  # warning
+  - 120 # error
+
+type_body_length:
+  - 350 # warning
+
+file_length:
+  - 600 # warning
+  - 900 # error
