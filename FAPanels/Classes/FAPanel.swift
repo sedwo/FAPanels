@@ -52,17 +52,17 @@ open class FAPanelController: UIViewController {
         setCenterPanelVC(controller, afterThat: completion)
     }
 
-    open func center( _ controller: UIViewController) -> FAPanelController {
+    @discardableResult open func center( _ controller: UIViewController) -> FAPanelController {
         centerPanelVC = controller
         return self
     }
 
-    open func left( _ controller: UIViewController?) -> FAPanelController {
+    @discardableResult open func left( _ controller: UIViewController?) -> FAPanelController {
         leftPanelVC = controller
         return self
     }
 
-    open func right( _ controller: UIViewController?) -> FAPanelController {
+    @discardableResult open func right( _ controller: UIViewController?) -> FAPanelController {
         rightPanelVC = controller
         return self
     }
@@ -115,7 +115,7 @@ open class FAPanelController: UIViewController {
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        _ = updateCenterPanelSlidingFrame()
+        updateCenterPanelSlidingFrame()
     }
 
     override open func viewWillLayoutSubviews() {

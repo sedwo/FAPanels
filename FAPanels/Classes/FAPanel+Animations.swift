@@ -413,7 +413,7 @@ extension FAPanelController {
     internal func openCenter(animated: Bool, shouldBounce bounce: Bool, afterThat completion: (() -> Void)?) {
 
         state = .center
-        _ = updateCenterPanelSlidingFrame()
+        updateCenterPanelSlidingFrame()
         if animated {
             animateCenterPanel(shouldBounce: bounce, completion: { (finished) in
                 self.leftPanelContainer.isHidden = true
@@ -435,7 +435,7 @@ extension FAPanelController {
 
     private func slideCenterPanel(animated: Bool, bounce: Bool) {
 
-        _ = updateCenterPanelSlidingFrame()
+        updateCenterPanelSlidingFrame()
         if animated {
             animateCenterPanel(shouldBounce: bounce, completion: { (finished) in
             })
@@ -660,7 +660,7 @@ extension FAPanelController {
         }
     }
 
-    internal func updateCenterPanelSlidingFrame() -> CGRect {
+    @discardableResult internal func updateCenterPanelSlidingFrame() -> CGRect {
 
         var frame: CGRect  = view.bounds
 
@@ -696,13 +696,13 @@ extension FAPanelController {
 
         if UI_USER_INTERFACE_IDIOM() == .phone {
 
-            _ = handleScrollsToTop(enabled: centerEnabled, forView: centerPanelContainer)
-            _ = handleScrollsToTop(enabled: leftEnabled, forView: leftPanelContainer)
-            _ = handleScrollsToTop(enabled: rightEnabled, forView: rightPanelContainer)
+            handleScrollsToTop(enabled: centerEnabled, forView: centerPanelContainer)
+            handleScrollsToTop(enabled: leftEnabled, forView: leftPanelContainer)
+            handleScrollsToTop(enabled: rightEnabled, forView: rightPanelContainer)
         }
     }
 
-    internal func handleScrollsToTop(enabled: Bool, forView view: UIView) -> Bool {
+    @discardableResult internal func handleScrollsToTop(enabled: Bool, forView view: UIView) -> Bool {
 
         if view is UIScrollView {
             let scrollView: UIScrollView = view as! UIScrollView
