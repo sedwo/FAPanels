@@ -77,7 +77,7 @@ class CenterVC: UIViewController {
         panel!.configs.rightPanelWidth = 80
         panel!.configs.bounceOnRightPanelOpen = false
         
-        panel!.delegate = self
+        panel!.panelStateDelegate = self
     }
     
     

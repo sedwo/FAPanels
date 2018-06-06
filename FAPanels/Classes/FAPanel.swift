@@ -108,9 +108,12 @@ open class FAPanelController: UIViewController {
 
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        layoutSideContainers(withDuration: 0.0, animated: false)
-        layoutSidePanelVCs()
-        centerPanelContainer.frame = updateCenterPanelSlidingFrame()
+
+        if self.isMovingToParentViewController {
+            layoutSideContainers(withDuration: 0.0, animated: false)
+            layoutSidePanelVCs()
+            centerPanelContainer.frame = updateCenterPanelSlidingFrame()
+        }
     }
 
     override open func viewDidAppear(_ animated: Bool) {
