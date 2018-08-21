@@ -20,8 +20,8 @@ public protocol FAPanelStateDelegate: class {
     func leftPanelDidBecomeActive()
     func rightPanelDidBecomeActive()
 
-    func didUnloadLeftPanelView()
-    func didUnloadRightPanelView()
+    func unloadLeftPanel()
+    func unloadRightPanel()
 }
 
 public extension FAPanelStateDelegate {
@@ -34,8 +34,8 @@ public extension FAPanelStateDelegate {
     func leftPanelDidBecomeActive() {}
     func rightPanelDidBecomeActive() {}
 
-    func didUnloadLeftPanelView() {}
-    func didUnloadRightPanelView() {}
+    func unloadLeftPanel() {}
+    func unloadRightPanel() {}
 }
 
 

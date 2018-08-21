@@ -281,7 +281,7 @@ extension CenterVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
 
 extension CenterVC: FAPanelStateDelegate {
-    
+
     func centerPanelWillBecomeActive() {
         print("centerPanelWillBecomeActive called")
     }
@@ -304,16 +304,19 @@ extension CenterVC: FAPanelStateDelegate {
     func rightPanelWillBecomeActive() {
         print("rightPanelWillBecomeActive called")
     }
-    
+
+
     func rightPanelDidBecomeActive() {
         print("rightPanelDidBecomeActive called")
     }
 
-    func didUnloadLeftPanelView() {
-        print("didUnloadLeftPanelView called")
+
+    func unloadLeftPanel() {
+        print("unloadLeftPanel called")
     }
 
-    func didUnloadRightPanelView() {
-        print("didUnloadRightPanelView called")
+
+    func unloadRightPanel() {
+        print("unloadRightPanel called")
     }
 }

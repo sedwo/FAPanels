@@ -595,8 +595,7 @@ extension FAPanelController {
         if configs.unloadLeftPanel {
             if leftPanelVC != nil {
                 if leftPanelVC!.isViewLoaded {
-                    leftPanelVC!.view.removeFromSuperview()
-                    panelStateDelegate?.didUnloadLeftPanelView()
+                    panelStateDelegate?.unloadLeftPanel()
                 }
             }
         }
@@ -604,8 +603,7 @@ extension FAPanelController {
         if configs.unloadRightPanel {
             if rightPanelVC != nil {
                 if rightPanelVC!.isViewLoaded {
-                    rightPanelVC!.view.removeFromSuperview()
-                    panelStateDelegate?.didUnloadRightPanelView()
+                    panelStateDelegate?.unloadRightPanel()
                 }
             }
         }
