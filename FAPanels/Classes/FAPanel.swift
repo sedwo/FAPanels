@@ -19,6 +19,9 @@ public protocol FAPanelStateDelegate: class {
     func centerPanelDidBecomeActive()
     func leftPanelDidBecomeActive()
     func rightPanelDidBecomeActive()
+
+    func didUnloadLeftPanelView()
+    func didUnloadRightPanelView()
 }
 
 public extension FAPanelStateDelegate {
@@ -30,6 +33,9 @@ public extension FAPanelStateDelegate {
     func centerPanelDidBecomeActive() {}
     func leftPanelDidBecomeActive() {}
     func rightPanelDidBecomeActive() {}
+
+    func didUnloadLeftPanelView() {}
+    func didUnloadRightPanelView() {}
 }
 
 
@@ -84,11 +90,19 @@ open class FAPanelController: UIViewController {
     }
 
     open func closeLeft() {
-        if isLeftPanelOnFront { slideLeftPanelOut(animated: true, afterThat: nil) } else { openCenter(animated: true) }
+        if isLeftPanelOnFront {
+            slideLeftPanelOut(animated: true, afterThat: nil)
+        } else {
+            openCenter(animated: true)
+        }
     }
 
     open func closeRight() {
-        if isRightPanelOnFront { slideRightPanelOut(animated: true, afterThat: nil) } else { openCenter(animated: true) }
+        if isRightPanelOnFront {
+            slideRightPanelOut(animated: true, afterThat: nil)
+        } else {
+            openCenter(animated: true)
+        }
     }
 
     // MARK: - Life Cycle

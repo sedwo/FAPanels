@@ -76,7 +76,12 @@ class CenterVC: UIViewController {
         panel!.configs = FAPanelConfigurations()
         panel!.configs.rightPanelWidth = 80
         panel!.configs.bounceOnRightPanelOpen = false
-        
+
+        panel!.configs.unloadLeftPanel = true
+
+        panel!.leftPanelPosition = .front
+        panel!.rightPanelPosition = .front
+
         panel!.panelStateDelegate = self
     }
     
@@ -303,5 +308,12 @@ extension CenterVC: FAPanelStateDelegate {
     func rightPanelDidBecomeActive() {
         print("rightPanelDidBecomeActive called")
     }
-    
+
+    func didUnloadLeftPanelView() {
+        print("didUnloadLeftPanelView called")
+    }
+
+    func didUnloadRightPanelView() {
+        print("didUnloadRightPanelView called")
+    }
 }
