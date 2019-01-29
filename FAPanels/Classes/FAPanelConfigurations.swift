@@ -152,14 +152,14 @@ open class FAPanelConfigurations: NSObject {
     
     
     
-    // Display a dakr overlay over the center panel when leftpanelposition = .front
+    // Display a dark overlay over the center panel when leftpanelposition = .front
     
     open var showDarkOverlayUnderLeftPanelOnTop : Bool = true
     open var darkOverlayUnderLeftPanelOnTopColor : UIColor = UIColor.black.withAlphaComponent(0.5)
 
     
     
-    // Display a dakr overlay over the center panel when rightpanelposition = .front
+    // Display a dark overlay over the center panel when rightpanelposition = .front
     
     open var showDarkOverlayUnderRightPanelOnTop : Bool = true
     open var darkOverlayUnderRightPanelOnTopColor : UIColor = UIColor.black.withAlphaComponent(0.5)

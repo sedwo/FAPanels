@@ -34,7 +34,7 @@ extension FAPanelController: UIGestureRecognizerDelegate {
                 return false
             }
 
-            let possible: Bool = (translate.x != 0) && ((fabs(translate.y) / fabs(translate.x)) < 1.0)
+            let possible: Bool = (translate.x != 0) && ((abs(translate.y) / abs(translate.x)) < 1.0)
             if  possible && (
                 (translate.x > 0 && leftPanelVC != nil) ||
                 (translate.x < 0 && rightPanelVC != nil)) {

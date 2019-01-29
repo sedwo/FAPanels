@@ -11,7 +11,7 @@ import UIKit
 
 // FAPanel Delegate
 
-public protocol FAPanelStateDelegate {
+public protocol FAPanelStateDelegate: class {
     
     func centerPanelWillBecomeActive()
     func leftPanelWillBecomeActive()
@@ -20,6 +20,9 @@ public protocol FAPanelStateDelegate {
     func centerPanelDidBecomeActive()
     func leftPanelDidBecomeActive()
     func rightPanelDidBecomeActive()
+
+    func unloadLeftPanel()
+    func unloadRightPanel()
 }
 
 public extension FAPanelStateDelegate {
@@ -31,6 +34,9 @@ public extension FAPanelStateDelegate {
     func centerPanelDidBecomeActive() {}
     func leftPanelDidBecomeActive() {}
     func rightPanelDidBecomeActive() {}
+
+    func unloadLeftPanel() {}
+    func unloadRightPanel() {}
 }
 
 
@@ -612,23 +618,23 @@ open class FAPanelController: UIViewController {
     
     //  Panel States
 
-    open var delegate: FAPanelStateDelegate? = nil
-    
+    open weak var panelStateDelegate: FAPanelStateDelegate? = nil
+
     internal  var _state: FAPanelVisibleState = .center {
         
         willSet {
             
             switch newValue {
             case .center:
-                delegate?.centerPanelWillBecomeActive()
+                panelStateDelegate?.centerPanelWillBecomeActive()
                 break
                 
             case .left:
-                delegate?.leftPanelWillBecomeActive()
+                panelStateDelegate?.leftPanelWillBecomeActive()
                 break
                 
             case .right:
-                delegate?.rightPanelWillBecomeActive()
+                panelStateDelegate?.rightPanelWillBecomeActive()
                 break
             }
         }
@@ -636,15 +642,15 @@ open class FAPanelController: UIViewController {
 
             switch _state {
             case .center:
-                delegate?.centerPanelDidBecomeActive()
+                panelStateDelegate?.centerPanelDidBecomeActive()
                 break
                 
             case .left:
-                delegate?.leftPanelDidBecomeActive()
+                panelStateDelegate?.leftPanelDidBecomeActive()
                 break
                 
             case .right:
-                delegate?.rightPanelDidBecomeActive()
+                panelStateDelegate?.rightPanelDidBecomeActive()
                 break
             }
         }
