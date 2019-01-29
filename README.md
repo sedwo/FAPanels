@@ -9,20 +9,34 @@
 
 
 
-[![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)
+[![Swift version](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat.svg)](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat.svg)
 [![Support Dependecy Manager](https://img.shields.io/badge/support-CocoaPods-red.svg?style=flat.svg)](https://img.shields.io/badge/support-CocoaPods-red.svg?style=flat.svg)
 [![Version](https://img.shields.io/cocoapods/v/FAPanels.svg?style=flat)](http://cocoapods.org/pods/FAPanels)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)
 [![Platform](https://img.shields.io/cocoapods/p/FAPanels.svg?style=flat)](http://cocoapods.org/pods/FAPanels)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/FAPanels.svg)](http://cocoapods.org/pods/FAPanels)
+[![CocoaPods](https://img.shields.io/cocoapods/at/FAPanels.svg)](http://cocoapods.org/pods/FAPanels)
 
 
-## Apps Using FAPanels
+
+## Famous Apps Using FAPanels
 ---
 
+- FanTazTech (https://itunes.apple.com/us/app/fantaztech/id1334853147?mt=8)
+- FTT Tech (https://itunes.apple.com/us/app/ftt-tech/id1376054178?mt=8)
+- SoleLinks (https://itunes.apple.com/us/app/sole-links/id1434352524?mt=8)
+- LOGX (https://itunes.apple.com/us/app/l-o-g-x/id1398600417?mt=8&ign-mpt=uo%3D4)
 - RepairDesk (https://itunes.apple.com/pk/app/repairdesk-pos-register/id1246495656?mt=8)
 - ScanShake Visitor (https://itunes.apple.com/us/app/scanshake-visitor/id1349888987?mt=8)
 - ScanShake Exhibitor (https://itunes.apple.com/us/app/scanshake-exhibitor/id1349889664?mt=8)
+
+
+## Issues Resolved ( > 0.5.0 only)
+---
+
+- [x] XCode 10 support 
+- [x] Swift 4.2 support
 
 
 
